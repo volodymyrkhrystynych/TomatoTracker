@@ -27,7 +27,7 @@ const Countdown = () => {
 		return minutes + ":" + seconds
 	};
 	const countUp = () => {
-		setSeconds(seconds + 1);
+		setSeconds(seconds => seconds + 1);
 	};
 
 	//setInterval(countUp, 1000);
@@ -36,6 +36,7 @@ const Countdown = () => {
 		<>
 			<label>{secondsToTime(seconds)}</label>
 			<Button onClick={startCountdown}>Start</Button>
+
 		</>
 	);
 };
