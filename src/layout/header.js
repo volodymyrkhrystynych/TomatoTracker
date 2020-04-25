@@ -1,8 +1,9 @@
 import React from "react";
 import { Tab, Tabs, AppBar, Box, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from "prop-types";
-import Countdown from "../timer/countdown.js";
+import Countdown from '../timer/countdown.js';
+import MyAbout from './about.js';
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -68,7 +69,7 @@ const Header = () => {
         <Countdown/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+	<MyAbout/>
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
